@@ -20,7 +20,5 @@ public class RecipeService {
     //получает рецепт в виде объекта JSON и переопределяет текущий рецепт.
     public Recipe postRecipe(Recipe recipe){
         return repository.save(recipe);
-
-
     }
 }
