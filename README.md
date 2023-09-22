@@ -26,7 +26,7 @@ Returns a user with a specified id as a JSON object (where {id} is the id of a u
 ### GET /alluser
 Returns all users
 ### POST /user/new
-Receives a user as a JSON object
+Receives a user as a JSON object and registers a user
 ### DELETE /user/{id}
 Deletes a user with a specified id.
 
