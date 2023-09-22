@@ -1,6 +1,6 @@
 # Recipe service
 ## About service
-The program is a multi-user web service based on Spring Boot that allows storing, retrieving, updating, and deleting recipes.
+The program is a multi-user web service based on Spring Boot that allows storing, retrieving, updating, and deleting recipes. Also service  supports the registration process, can handle a lot of users, and each of them can add their own recipes.
 ## How to Run
 * An installed docker is required.
 * Assemble the image using the command 
