@@ -1,16 +1,26 @@
 package com.example.receipt.entities;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.UpdateTimestamp;
 
+import javax.persistence.*;
+import java.time.Instant;
+import java.util.List;
 
-@Data
-@AllArgsConstructor
 @NoArgsConstructor
+@Entity
+@Table(name = "recipes")
 public class Recipe {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
     private String name;
     private String description;
-    private String ingredients;
-    private String directions;
+    @ElementCollection
+    private List<String> ingredients;
+    @ElementCollection
+    private List<String> directions;
+    private String category;
+    @UpdateTimestamp
+    private Instant data;
 }
