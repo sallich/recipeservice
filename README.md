@@ -21,8 +21,12 @@ Receives a recipe as a JSON object and returns a JSON object with one id field.
 Deletes a recipe with a specified id.
 ### PUT /recipe/{id}
 Receives a recipe as a JSON object and updates a recipe with a specified id. Also, update the date field too. The server should return the 204 (No Content) status code. If a recipe with a specified id does not exist, the server should return 404 (Not found). The server should respond with 400 (Bad Request) if a recipe doesn't follow the restrictions indicated above
-### GET /registration
-### POST /registration
-### GET /admin
-### POST /admin
-### POST /admin/gt/{userId}
+### GET /user/{id}
+Returns a user with a specified id as a JSON object (where {id} is the id of a user). The server should respond with the 200 (Ok) status code. If a user with a specified id does not exist, the server should respond with 404 (Not found).
+### GET /alluser
+Returns all users
+### POST /user/new
+Receives a user as a JSON object
+### DELETE /user/{id}
+Deletes a user with a specified id.
+
